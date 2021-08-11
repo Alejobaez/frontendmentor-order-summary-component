@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+:root {
+  /* Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  background-color: var(--pale-blue);
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 2em;
+  font-family: 'Red Hat Display', sans-serif;
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+}
+.main {
+  border-radius: 1em;
+  background-color: #fff;
+  height: 530px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main__hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1em 1em 0 0;
+}
+
+.main__title {
+  font-weight: 900;
+}
+
+.main__text {
+  padding: 0 1em;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--desaturated-blue);
+}
+
+.plan {
+  margin: 1em;
+  display: flex;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: var(--very-pale-blue);
+}
+.plan button {
+  margin-left: 0.5em;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--bright-blue);
+  font-weight: 900;
+  text-decoration: underline;
+  transition: 0.3s text-decoration;
+}
+.plan button:hover {
+  text-decoration: none;
+}
+.plan__text {
+  color: var(--desaturated-blue);
+}
+.bold {
+  font-weight: 900;
+}
+
+.main__btn {
+  background: var(--bright-blue);
+  border: none;
+  outline: none;
+  padding: 1em;
+  width: 90%;
+  color: var(--very-pale-blue);
+  font-weight: 700;
+  font-size: 0.875em;
+  border-radius: 1em;
+  box-shadow: 0px 12px 15px rgba(56, 41, 224, 0.3);
+  transition: 0.3s opacity;
+}
+.main__btn:hover {
+  opacity: 0.9;
+}
+
+.main__btn-cancel {
+  margin-top: 1.5em;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: 900;
+  color: var(--desaturated-blue);
+  transition: 0.3s color;
+}
+
+.main__btn-cancel:hover {
+  color: var(--dark-blue);
+}
